@@ -9,31 +9,6 @@
 
     if(window.goBug) {
 
-      // We're looking at a FogBugz case
-      name = goBug.ixBug + ": " + goBug.sTitle
-
-    } else if ($("#issue_header_summary").length){
-
-      // We're looking at a JIRA case
-      name = $("#key-val").text() + ": " + $("#issue_header_summary").text();
-
-    } else if ($("#show_issue").length) {
-
-      // We're looking at a GitHub issue
-      name = $("#show_issue .number strong").text() + " " + $("#show_issue .content-title").text();
-
-    } else if ($("#all_commit_comments").length) {
-
-      // We're looking at a GitHub commit
-      name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim();
-      
-    } else if (jQuery('head meta[content=Redmine]').length) {
-      
-      // We're looking at a redmine issue
-      name = $("#content h2:first").text().trim() + ": " + $("#content h3:first").text().trim();
-
-    } else {
-
       // It isn't anything we recognize, but we'll see if we can make something using the selected text
 
     }
@@ -49,11 +24,12 @@
 
     // If they've selected text, add it to the name/desc of the card
     if(selection) {
-      if(!name) {
-        name = selection;
-      } else {
         desc += "\n\n" + selection;
-      }
+    }
+
+  // Set the name of the car to the title of the page
+	 if(!name) {
+        name = document.title;
     }
 
     // Create the card
