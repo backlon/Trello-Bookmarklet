@@ -27,7 +27,7 @@
         desc += "\n\n" + selection;
     }
 
-  // Set the name of the car to the title of the page
+	// Set the name of the card to the title of the page
 	 if(!name) {
         name = document.title;
     }
@@ -193,23 +193,23 @@
     // Load the Trello script
     function(appKey, next) { $.getScript("https://trello.com/1/client.js?key=" + appKey, next); },
     // Authorize our application
-    function(a, b, c, next) {
-      store(appKeyName, Trello.key())
-      Trello.authorize({
-        interactive: false,
-        success: next,
-        error: function(){
-          overlayPrompt("You need to authorize Trello", false, function(){
-            Trello.authorize({
-              type: "popup",
-              expiration: "never",
-              scope: { read: true, write: true },
-              success: next
-            });
-          });
-        }
-      });
-    },
+//    function(a, b, c, next) {
+//      store(appKeyName, Trello.key())
+//      Trello.authorize({
+//        interactive: false,
+//        success: next,
+//        error: function(){
+//          overlayPrompt("You need to authorize Trello", false, function(){
+//            Trello.authorize({
+//              type: "popup",
+//              expiration: "never",
+//              scope: { read: true, write: true },
+//              success: next
+//            });
+//          });
+//        }
+//      });
+//    },
     // Get the list to add cards to, either from local storage or by prompting the user
     function(next) {
       var idList = store(idListName) || window[idListName];
