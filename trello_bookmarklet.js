@@ -92,7 +92,6 @@
       background: "#000",
       opacity: .75,
       "z-index": 1e4,
-      position: "absolute",
       left: 0,
       top: 0,
       right: 0,
@@ -106,7 +105,6 @@
     // Show a "popup"
     var $div = $("<div>")
     .css({
-      position: "absolute",
       border: "1px solid #000",
       padding: "16px",
       width: 300,
