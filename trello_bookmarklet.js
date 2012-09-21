@@ -41,17 +41,13 @@
         })
         .text("Created a Trello Card")
         .css({
-          padding-left: "40px",
-          padding-right: "40px",
-          padding-top: "100px",
-          padding-bottom: "1500px",
-          border: "5px solid #000",
-          background: "#fff",
-          "z-index": "1e3",
-          margin: "40px"
           position: "absolute",
-          top: "0",
-          left: "0"
+          left: 0,
+          top: 0,
+          padding: "400px",
+          border: "1px solid #000",
+          background: "#fff",
+          "z-index": 1e3
         })
         .appendTo("body")
 
