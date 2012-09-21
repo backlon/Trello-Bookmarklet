@@ -44,12 +44,19 @@
           position: "absolute",
           left: 0,
           top: 0,
-          padding: "400px",
+          padding-top: "40px",
+          padding-left: "40px",
+          padding-right: "40px",
+          padding-bottom: "4000px",
           border: "1px solid #000",
           background: "#fff",
           "z-index": 1e3
         })
         .appendTo("body")
+
+        setTimeout(function(){
+          $cardLink.fadeOut(6000);
+        }, 10000)
 
       })
     }
