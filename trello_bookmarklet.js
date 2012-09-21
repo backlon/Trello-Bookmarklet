@@ -7,12 +7,6 @@
     // Default description is the URL of the page we're looking at
     var desc = location.href;
 
-    if(window.goBug) {
-
-      // It isn't anything we recognize, but we'll see if we can make something using the selected text
-
-    }
-
     // Get any selected text
     var selection;
 
@@ -47,7 +41,6 @@
         })
         .text("Created a Trello Card")
         .css({
-          position: "absolute",
           left: 0,
           top: 0,
           padding: "4px",
