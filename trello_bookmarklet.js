@@ -41,9 +41,7 @@
         })
         .text("Created a Trello Card")
         .css({
-          left: 0,
-          top: 0,
-          padding: "4px",
+          padding: "400px",
           border: "1px solid #000",
           background: "#fff",
           "z-index": 1e3
